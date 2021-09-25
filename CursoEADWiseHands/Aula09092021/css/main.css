@@ -1,0 +1,17 @@
+table, th, td {
+    border:1px solid rgb(185, 50, 50);
+  }
+
+  img {
+      width: 300px;
+
+  }
+
+  nav {
+      display: inline;
+
+  }
+  nav a {
+      background-color: rgb(8, 255, 243);
+      color: rgb(0, 0, 0);
+  }
