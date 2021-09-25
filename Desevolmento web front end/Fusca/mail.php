@@ -55,8 +55,8 @@
                   <fieldset>
                     <legend class="text-center">Contato</legend>
             
-                     <!-- Name input-->
-                     <div class="form-group">
+                    <!-- Name input-->
+                    <div class="form-group">
                       <label class="col-md-3 control-label" for="name">Seu nome:</label>
                       <div class="col-md-9">
                         <input name="name" placeholder="Seu nome completos" onblur="this.placeholder = 'Seu nome completos'" class="common-input mb-20 form-control" required="" type="text">
@@ -94,6 +94,7 @@
                         <textarea class="common-textarea form-control" name="message" placeholder="Mensagem de texto" onblur="this.placeholder = 'Mensagem de texto'" required=""></textarea>		
                       </div>
                     </div>
+            
                     <!-- Form actions -->
                     <div class="form-group">
                       <div class="col-md-12 text-right">
@@ -101,6 +102,38 @@
                       </div>
                     </div>
                   </fieldset>
+               
+               <?php
+    $to = 'antos2lite@gmail.com';
+    $name= $_POST["name"];
+    $email= $_POST["email"];
+    $text= $_POST["message"];
+    $telefone= $_POST["telefone"];
+    $assunto= $_POST["assunto"];
+
+
+    $headers = 'MIME-Version: 1.0' . "\r\n";
+    $headers .= "From: " . $email . "\r\n"; // Sender's E-mail
+    $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+
+    $message ='<table style="width:100%">
+      <tr><td>Seu nome completos: '.$name.'</td></tr>
+      <tr><td>E-mail: '.$email.'</td></tr>
+      <tr><td>Telefone: '.$telefone.'</td></tr>
+      <tr><td>Mensagem: '.$text.'</td></tr>
+      <tr><td>Assunto: '.$assunto.'</td></tr>
+
+        
+    </table>';
+
+    if (@mail($to, $email, $message, $headers))
+    {
+        echo 'A mensagem foi enviada.';
+    }else{
+        echo 'A mensagem não foi enviada.';
+    }
+
+?>
                   </form>
                 </div>
               </div>

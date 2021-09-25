@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -16,13 +16,12 @@
         <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&amp;display=swap" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     </head>
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
             <div class="container px-5">
-                <a class="navbar-brand fw-bold" >Volks Retrô</a>
+                <a class="navbar-brand fw-bold" href="#page-top">Volks Retrô</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="bi-list"></i>
@@ -33,14 +32,6 @@
                         <li class="nav-item"><a class="nav-link me-lg-3" href="sobre.html">Sobre</a></li>
                         <li class="nav-item"><a class="nav-link me-lg-3" href="contato.html">contato</a></li>
                     </ul>
-                    <div class="wrap">
-                        <div class="search">
-                           <input type="text" class="searchTerm" placeholder="Procurar">
-                           <button type="submit" class="searchButton">
-                             <i class="fa fa-search"></i>
-                          </button>
-                        </div>
-                     </div>
                 </div>
             </div>
         </nav>
@@ -48,18 +39,32 @@
         <header class="masthead">
             <div class="container px-5">
                 <div class="row gx-5 align-items-center">
-                   <h2>em breve....</h2>
+                    <div class="row animated fadeInUpNow">
+                        <div class="col-lg-8 col-md-offset-2">
+                            <form action="#" name="MYFORM" id="MYFORM">
+                                <input name="name" size="30" type="text" id="name" class="col-lg-6 leftradius" placeholder="Your Name">
+                                <input name="email" size="30" type="text" id="email" class="col-lg-6 rightradius" placeholder="E-mail Address">
+                                <br/><br/>
+                                <textarea id="message" name="message" class="col-lg-12 allradius" placeholder="Message" rows="7"></textarea><br/>
+                                <img src="contact/refresh.jpg" alt="" id="refresh" style="width:45px;"/><img src="contact/get_captcha.php" alt="" id="captcha" style="height:45px;"/>
+                                <br/>
+                                <input name="code" type="text" id="code" placeholder="Enter Captcha" class="top20">
+                                <br/>
+                                <input value="Send Message" type="submit" id="Send" class="btn btn-default btn-lg">
+                                <br/>
+                            </form>
+                        </div>
+                    </div>
                    
                 </div>
             </div>
         </header>
       
-
-         <!-- Footer-->
-         <footer >
-            <div class="container">
+        <!-- Footer-->
+        <footer class="bg-black text-center py-5">
+            <div class="container px-5">
                 <div class="text-white-50 small">
-                    <div class="mb-2"><b>Volkos Retrô &copy; Your Website 2021. All Rights Reserved.</b></div>
+                    <div class="mb-2">Volkos Retrô &copy; Your Website 2021. All Rights Reserved.</div>
                 </div>
             </div>
         </footer>
